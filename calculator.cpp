@@ -10,9 +10,12 @@ struct binary { };
 
 int main() {
 	std::string binary = ""; 
+	int sign = 0; 
 	std::cout << "Enter the binary string: ";
 	std::cin >> binary;
-	std::cout << binary << "\n"; 
+	std::cout << "is it positive/negative (0/1)(p/n): "; 
+	std::cin >> sign; 
+ 	
 	int dec = getBinary(binary);
 	std::cout << dec << "\n"; 
 
