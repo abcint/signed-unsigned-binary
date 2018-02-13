@@ -1,12 +1,16 @@
 #include<iostream> 
 
-std::string getBinary(std::string s) {
-        return "1";
+int getBinary(std::string s) {
+        return atoi(s.c_str());
 }
 struct binary { }; 
 
-int main() { 
-	std::cout << "Enter the binary string: "; 
-	std::string binary = getBinary("10101");
+int main() {
+	std::string binary = ""; 
+	std::cout << "Enter the binary string: ";
+	std::cin >> binary;
+	std::cout << binary << "\n"; 
+	int dec = getBinary(binary);
+	std::cout << dec << "\n"; 
 
 }  
