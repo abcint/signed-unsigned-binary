@@ -1,5 +1,6 @@
 /*
 ** Calculator.cpp - a binary to integer calculator for signed/unsigned ints
+** Bradley Snyder brs80@zips.uakron.edu
 */
 
 #include <string> 
@@ -10,8 +11,6 @@
 int getBinary(std::string s) {
 	return std::stoi(s, nullptr, 2); 
 }
-
-struct binary { }; 
 
 int main() {
 	std::string binary = "", sign = ""; 
