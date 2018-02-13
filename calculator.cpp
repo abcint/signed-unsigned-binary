@@ -1,3 +1,7 @@
+/*
+** Calculator.cpp - a binary to integer calculator for signed/unsigned ints
+*/
+
 #include <string> 
 #include <iostream>
 #include <cmath> 
@@ -21,7 +25,6 @@ int main() {
 		if(binary[0] == '0') {
 			for(int i=1; i < binary.size(); i++) {
 				int temp = binary[i] - '0'; 
-				std::cout << temp << "\n"; 
 				decimal += temp * pow(2.0 , binary.size()-i-1);
 			}
 			std::cout << decimal << "\n"; 
