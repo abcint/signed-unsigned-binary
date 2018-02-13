@@ -1,8 +1,11 @@
-#include<iostream> 
+#include <string> 
+#include <iostream> 
+
 
 int getBinary(std::string s) {
-        return atoi(s.c_str());
+	return std::stoi(s, nullptr, 2); 
 }
+
 struct binary { }; 
 
 int main() {
