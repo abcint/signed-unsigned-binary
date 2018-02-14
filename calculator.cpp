@@ -1,5 +1,5 @@
 /*
-** Calculator.cpp - a binary to integer calculator for signed/unsigned ints
+** Calculator.cpp - a binary to integer converter for signed/unsigned bits (MAX 32 bits) 
 ** Bradley Snyder brs80@zips.uakron.edu
 */
 
