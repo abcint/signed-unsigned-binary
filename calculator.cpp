@@ -3,9 +3,9 @@
 ** Bradley Snyder brs80@zips.uakron.edu
 */
 
-#include <string> 
+#include <string>
 #include <iostream>
-#include <cmath> 
+#include <cmath>
 
 
 int getBinary(std::string s) {
@@ -13,19 +13,28 @@ int getBinary(std::string s) {
 }
 
 int main() {
-	std::string binary = "", sign = ""; 
-	int decimal = 0; 
+	std::string binary = "", sign = "";
+	int decimal = 0;
 	std::cout << "Enter the binary string: ";
 	std::cin >> binary;
-	std::cout << "is it signed/unsigned (0/1)(s/u): "; 
+	std::cout << "is it signed/unsigned (0/1)(s/u): ";
 	std::cin >> sign;
 
 	if(sign == "0" || sign == "s" || sign == "signed") {
 		if(binary[0] == '0') {
-			for(int i=1; i < binary.size(); i++) {
+			for(int i=1; i<binary.size(); i++) {
 				int temp = binary[i] - '0'; 
 				decimal += temp * pow(2.0 , binary.size()-i-1);
 			}
+			std::cout << decimal << "\n"; 
+		}
+		if(binary[0] == '1') { 
+			for(int i=1; i<binary.size(); i++) { 
+				int temp = binary[i] - '0';
+				temp == 0 ? temp=1 : temp=0;
+				decimal += temp * pow(2.0 , binary.size()-i-1);
+			}
+			decimal = -decimal-1;
 			std::cout << decimal << "\n"; 
 		}
 	} else {
